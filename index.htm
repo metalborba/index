@@ -1,0 +1,156 @@
+<!-- filename: index.htm -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metal Borba — Inspeções NR-13, Linhas de Gás, Reclassificação de Monta e ART</title>
+  <meta name="description" content="Site em construção. Metal Borba: inspeções conforme NR-13, inspeção em linhas de gás, reclassificação de monta e ART para serviços gerais." />
+  <meta name="theme-color" content="#0A3D62" />
+  <style>
+    :root{
+      --bg:#0A3D62;
+      --bg-2:#08344F;
+      --acc:#F8C102;
+      --txt:#14202A;
+      --muted:#5B6B7A;
+      --light:#F7FAFC;
+      --card:#FFFFFF;
+      --ok:#1B9246;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui, Arial, sans-serif;
+      color:var(--txt); background:var(--light); line-height:1.5;
+    }
+    a{color:var(--bg); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .top-banner{background:linear-gradient(90deg, var(--bg), var(--bg-2)); color:#fff; padding:.5rem; text-align:center}
+    header{max-width:1100px; margin:0 auto; padding:1rem; display:flex; justify-content:space-between; align-items:center}
+    .brand{display:flex; align-items:center; gap:.75rem; font-weight:700; color:var(--bg)}
+    .brand .logo{width:40px; height:40px; border-radius:8px; background:var(--bg); display:grid; place-items:center; color:#fff; font-weight:800}
+    nav{display:flex; gap:1rem}
+    .hero{max-width:1100px; margin:0 auto; padding:2rem 1rem; display:grid; grid-template-columns:1fr 1fr; gap:1.5rem}
+    .hero h1{margin:0 0 .5rem; font-size:2rem; color:var(--bg)}
+    .hero p{color:var(--muted)}
+    .btn{padding:.6rem .9rem; border-radius:10px; font-weight:600; background:var(--bg); color:#fff; border:none; cursor:pointer}
+    .btn.secondary{background:#fff; color:var(--bg); border:1px solid #cfe0ef}
+    .grid{max-width:1100px; margin:0 auto; padding:1rem; display:grid; grid-template-columns:repeat(2,1fr); gap:1rem}
+    .card{background:var(--card); border:1px solid #e6eef5; border-radius:12px; padding:1rem}
+    .card h3{margin-top:0; color:var(--bg)}
+    .list{list-style:none; padding:0; margin:0}
+    .list li{margin:.3rem 0}
+    .notice{max-width:1100px; margin:0 auto; padding:1rem; background:#fff8e6; border:1px solid #ffe7af; border-radius:12px}
+    .contact{max-width:1100px; margin:0 auto; padding:2rem 1rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+    .contact .info, .contact form{background:var(--card); border:1px solid #e6eef5; border-radius:12px; padding:1rem}
+    label{font-weight:600; color:var(--bg)}
+    input, textarea{width:100%; margin:.25rem 0 .75rem; padding:.6rem; border-radius:10px; border:1px solid #cfe0ef}
+    textarea{min-height:120px}
+    footer{background:linear-gradient(90deg, var(--bg), var(--bg-2)); color:#cfe0ef; margin-top:2rem}
+    .foot{max-width:1100px; margin:0 auto; padding:1rem; display:flex; justify-content:space-between; flex-wrap:wrap}
+    .extra{background:#063046; color:#cfe0ef; padding:1rem; text-align:center}
+    .extra a{color:var(--acc)}
+    @media(max-width:920px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .contact{grid-template-columns:1fr}}
+    /* Botão flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .whatsapp-float img {
+      width: 35px;
+      height: 35px;
+    }
+    .whatsapp-float:hover {
+      background-color: #20ba5a;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-banner">Site em construção — Metal Borba</div>
+
+  <header>
+    <div class="brand">
+      <div class="logo">MB</div>
+      <div>Metal Borba</div>
+    </div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#nr13">NR-13</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Inspeções técnicas com segurança e responsabilidade</h1>
+        <p>Atuamos conforme a Norma Regulamentadora nº 13, com inspeções em caldeiras, vasos de pressão e tubulações, incluindo linhas de gás, reclassificação de monta e emissão de ART.</p>
+        <button class="btn">Solicitar orçamento</button>
+        <button class="btn secondary">Ver serviços</button>
+      </div>
+      <div class="card">
+        <h2>Escopo resumido</h2>
+        <ul class="list">
+          <li>✓ Inspeções conforme NR-13</li>
+          <li>✓ Inspeção em linhas de gás</li>
+          <li>✓ Reclassificação de monta</li>
+          <li>✓ Emissão de ART</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 id="servicos" style="text-align:center;color:var(--bg)">Serviços</h2>
+    <section class="grid">
+      <div class="card">
+        <h3>Inspeções NR-13</h3>
+        <p>Inspeções periódicas em caldeiras e vasos de pressão.</p>
+      </div>
+      <div class="card">
+        <h3>Linhas de gás</h3>
+        <p>Verificação de integridade e estanqueidade em GLP/GN.</p>
+      </div>
+      <div class="card">
+        <h3>Reclassificação de monta</h3>
+        <p>Laudos técnicos e atualização de documentação.</p>
+      </div>
+      <div class="card">
+        <h3>ART</h3>
+        <p>Emissão de Anotação de Responsabilidade Técnica.</p>
+      </div>
+    </section>
+
+    <section id="nr13" class="notice">
+      <h2>Compromisso com a NR-13</h2>
+      <p>A Metal Borba observa a Norma Regulamentadora nº 13 em seus processos, assegurando integridade e conformidade técnica.</p>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="info">
+        <h2>Contato</h2>
+        <p>Fale conosco para agendar inspeção ou solicitar proposta.</p>
+        <ul class="list">
+          <li>☎ Telefone: (41) 0000-0000</li>
+          <li>✉ E-mail: contato@metalborba.com.br</li>
+          <li>📍 Curitiba — Paraná</li>
+        </ul>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Obrigado! Retornaremos em breve.');">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" required />
+        <label for="email">E-mail</label>
+        <input id="email" type="email" required />
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem"></textarea>
+        <button class="btn" type
