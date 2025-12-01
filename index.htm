@@ -50,7 +50,11 @@
     .foot{max-width:1100px; margin:0 auto; padding:1rem; display:flex; justify-content:space-between; flex-wrap:wrap}
     .extra{background:#063046; color:#cfe0ef; padding:1rem; text-align:center}
     .extra a{color:var(--acc)}
-    @media(max-width:920px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} .contact{grid-template-columns:1fr}}
+    @media(max-width:920px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
     /* Botão flutuante WhatsApp */
     .whatsapp-float {
       position: fixed;
@@ -72,9 +76,7 @@
       width: 35px;
       height: 35px;
     }
-    .whatsapp-float:hover {
-      background-color: #20ba5a;
-    }
+    .whatsapp-float:hover { background-color: #20ba5a; }
   </style>
 </head>
 <body>
@@ -97,8 +99,8 @@
       <div>
         <h1>Inspeções técnicas com segurança e responsabilidade</h1>
         <p>Atuamos conforme a Norma Regulamentadora nº 13, com inspeções em caldeiras, vasos de pressão e tubulações, incluindo linhas de gás, reclassificação de monta e emissão de ART.</p>
-        <button class="btn">Solicitar orçamento</button>
-        <button class="btn secondary">Ver serviços</button>
+        <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'});">Solicitar orçamento</button>
+        <button class="btn secondary" onclick="document.getElementById('servicos').scrollIntoView({behavior:'smooth'});">Ver serviços</button>
       </div>
       <div class="card">
         <h2>Escopo resumido</h2>
@@ -112,7 +114,7 @@
     </section>
 
     <h2 id="servicos" style="text-align:center;color:var(--bg)">Serviços</h2>
-    <section class="grid">
+    <section class="grid" aria-label="Serviços">
       <div class="card">
         <h3>Inspeções NR-13</h3>
         <p>Inspeções periódicas em caldeiras e vasos de pressão.</p>
@@ -152,5 +154,39 @@
         <label for="email">E-mail</label>
         <input id="email" type="email" required />
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem"></textarea>
-        <button class="btn" type
+        <textarea id="mensagem" placeholder="Conte-nos sobre sua necessidade"></textarea>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <strong>Metal Borba</strong>
+        <small>Inspeções NR-13, linhas de gás, reclassificação de monta e ART.</small>
+      </div>
+      <div>
+        <small>CNPJ: 00.000.000/0000-00</small>
+        <small>&copy; <span id="year"></span> Todos os direitos reservados.</small>
+      </div>
+    </div>
+    <div class="extra">
+      <p><strong>Contato direto:</strong></p>
+      <p>📞 Telefone: (41) 0000-0000</p>
+      <p>✉ E-mail: contato@metalborba.com.br</p>
+      <p>💬 WhatsApp: <a href="https://wa.me/5541999999999" target="_blank" rel="noopener">(41) 99999-9999</a></p>
+      <p>📍 Curitiba — Paraná</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5541999999999" class="whatsapp-float" target="_blank" aria-label="Conversar no WhatsApp" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
