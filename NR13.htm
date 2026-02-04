@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Galeria e guia minimalista sobre inspeções NR-13 realizadas pela Metal Borba.">
+  <title>Inspeções NR-13 — Metal Borba</title>
+  <style>
+    :root{
+      --bg:#F7FAFC;
+      --brand:#0A3D62;
+      --card:#FFFFFF;
+      --accent:#1e90ff;
+      --muted:#6b7280;
+      --radius:8px;
+      --gap:1rem;
+      --max-width:960px;
+    }
+
+    html,body{height:100%}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      margin:0;
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+
+    a{color:inherit}
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:1rem;
+      top:1rem;
+      width:auto;
+      height:auto;
+      padding:.5rem .75rem;
+      background:#000;
+      color:#fff;
+      border-radius:4px;
+      z-index:1000;
+    }
+
+    header, footer{
+      background:var(--brand);
+      color:#fff;
+      text-align:center;
+      padding:1rem;
+    }
+    header h1{margin:0; font-size:1.25rem; font-weight:600}
+    header p{margin:.25rem 0 0; font-size:.9rem; color:rgba(255,255,255,.85)}
+
+    main{padding:1.25rem 1rem 3rem}
+
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1.25rem;
+    }
+
+    .intro{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow:0 2px 6px rgba(2,6,23,.04);
+    }
+    .intro h2{margin:.25rem 0 0; font-size:1.05rem}
+    .intro p{margin:.5rem 0; color:var(--muted)}
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:1rem;
+      align-items:start;
+    }
+
+    @media (max-width:900px){
+      .two-col{grid-template-columns:1fr}
+    }
+
+    .panel{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow:0 2px 6px rgba(2,6,23,.04);
+    }
+
+    .panel h3{margin:0 0 .5rem 0; font-size:1rem}
+    .panel ul{margin:.5rem 0 0 1.1rem; color:var(--muted)}
+    .panel li{margin:.35rem 0}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:var(--gap);
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      text-align:left;
+      box-shadow:0 2px 6px rgba(2,6,23,.06);
+      display:flex;
+      flex-direction:column;
+      gap:.5rem;
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .card:focus-within,
+    .card:hover{transform:translateY(-4px); box-shadow:0 6px 18px rgba(2,6,23,.08)}
+
+    .card figure{margin:0}
+    .card img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:6px;
+      object-fit:cover;
+    }
+    .card figcaption{
+      margin-top:.5rem;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:.5rem;
+      margin-top:.5rem;
+      font-size:.85rem;
+      color:var(--muted);
+    }
+
+    .btn-voltar{
+      display:inline-block;
+      background:var(--accent);
+      padding:.5rem .9rem;
+      border-radius:6px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:600;
+      transition:background .12s ease, transform .12s ease;
+    }
+    .btn-voltar:hover{background:#0f7be6; transform:translateY(-2px)}
+    .btn-voltar:focus{outline:3px solid rgba(30,144,255,.25); outline-offset:3px}
+
+    @media (max-width:600px){
+      .grid{margin:0}
+      header, footer{padding:.75rem}
+      header h1{font-size:1.1rem}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .card, .btn-voltar{transition:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Pular para o conteúdo</a>
+
+  <header>
+    <h1>Inspeções NR-13</h1>
+    <p>Galeria e guia minimalista — Metal Borba</p>
+  </header>
+
+  <main id="content" aria-labelledby="gallery-title">
+    <div class="container">
+
+      <!-- Introdução minimalista sobre NR-13 -->
+      <section class="intro" aria-labelledby="nr13-title">
+        <h2 id="nr13-title">O que é NR-13</h2>
+        <p>NR‑13 é a Norma Regulamentadora que define requisitos mínimos para garantir a integridade e a operação segura de caldeiras, vasos de pressão, tubulações de interligação e tanques metálicos de armazenamento. Responsabilidade do empregador e do profissional legalmente habilitado.</p>
+      </section>
+
+      <!-- Conteúdo em duas colunas: explicação e checklist -->
+      <div class="two-col">
+        <section class="panel" aria-labelledby="como-title">
+          <h3 id="como-title">Como é feita a inspeção (resumo objetivo)</h3>
+          <ul>
+            <li><strong>1. Verificação documental:</strong> registros, laudos anteriores e certificados.</li>
+            <li><strong>2. Inspeção visual:</strong> corrosão, trincas, vazamentos, suportes e isolamento.</li>
+            <li><strong>3. Ensaios não destrutivos (END):</strong> ultrassom, partículas magnéticas, líquidos penetrantes conforme necessidade.</li>
+            <li><strong>4. Testes de pressão:</strong> hidrostático ou pneumático quando aplicável.</li>
+            <li><strong>5. Verificação de instrumentação:</strong> válvulas de segurança, manômetros e calibrações.</li>
+            <li><strong>6. Classificação de risco:</strong> priorização de não conformidades e definição de ações corretivas.</li>
+            <li><strong>7. Emissão do laudo:</strong> relatório com fotos, resultados, recomendações e assinatura do PLH.</li>
+          </ul>
+        </section>
+
+        <aside class="panel" aria-labelledby="checklist-title">
+          <h3 id="checklist-title">Checklist rápido</h3>
+          <ul>
+            <li>Registro do equipamento atualizado</li>
+            <li>Laudos anteriores disponíveis</li>
+            <li>Fotos das não conformidades</li>
+            <li>END realizados conforme plano</li>
+            <li>Testes de pressão quando exigidos</li>
+            <li>Válvulas e instrumentos calibrados</li>
+            <li>Laudo assinado por PLH</li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Galeria de imagens -->
+      <section class="grid" aria-label="Galeria de imagens de inspeções NR-13">
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20260112_104926.jpg?raw=true"
+                 alt="Caldeira durante inspeção NR-13 em 12 de janeiro de 2026">
+          </figure>
+          <div class="meta">
+            <span>Exame interno (câmara de vapor/água).</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20260112_125000.jpg?raw=true"
+                 alt="Vaso de pressão com marcações de inspeção NR-13 em 12 de janeiro de 2026">
+          </figure>
+          <div class="meta">
+            <span>Exame interno (fornalha).</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20260112_131947.jpg?raw=true"
+                 alt="Solda e junta inspecionadas conforme NR-13 em 12 de janeiro de 2026">
+          </figure>
+          <div class="meta">
+            <span>Testes hidrostático / estanqueidade.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20240730_145926.jpg?raw=true"
+                 alt="Inspeção visual de tubulação conforme NR-13 em 30 de julho de 2024">
+		  </figure>
+          <div class="meta">
+            <span>Boca de visita.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20240730_121336.jpg?raw=true"
+                 alt="Placa de identificação e válvula durante inspeção NR-13 em 30 de julho de 2024">
+          </figure>
+          <div class="meta">
+            <span>Placa de identificação.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20240427_100019.jpg?raw=true"
+                 alt="Registro fotográfico de medição e instrumentos em inspeção NR-13 em 27 de abril de 2024">
+          </figure>
+          <div class="meta">
+            <span>Placa de identificação.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/20240427_095906.jpg?raw=true"
+                 alt="Visão geral do equipamento inspecionado conforme NR-13 em 27 de abril de 2024">
+          </figure>
+          <div class="meta">
+            <span>Caldeira flamotubular vertical.</span>
+          </div>
+        </article>
+		
+		<article class="card">
+          <figure>
+            <img src="https://github.com/metalborba/index/blob/main/exemplo-de-ART-preenchida.webp?raw=true"
+                 alt="Visão geral do equipamento inspecionado conforme NR-13 em 27 de abril de 2024">
+          </figure>
+          <div class="meta">
+            <span>Modelo ART.</span>
+          </div>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://metalborba.github.io/index/" class="btn-voltar" aria-label="Voltar para a página inicial">← Voltar</a>
+  </footer>
+</body>
+</html>
